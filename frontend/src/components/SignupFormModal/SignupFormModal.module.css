@@ -52,6 +52,15 @@
   background-color: #0056b3;
 }
 
+.signupForm button:disabled{
+  filter : brightness(.8);
+  cursor: not-allowed;
+}
+
+.signupForm button:disabled:hover{
+  background-color: #007bff;
+}
+
 .signupForm p {
   color: red;
   font-size: 14px;
