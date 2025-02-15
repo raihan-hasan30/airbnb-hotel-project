@@ -62,7 +62,7 @@ function SpotDetails() {
               )}
             </div>
 
-            <ReviewList reviews={reviews} spotDetails={spotDetails} />
+            <ReviewList reviews={spotDetails.Reviews} spotDetails={spotDetails} />
           </div>
         </section>
 
@@ -74,9 +74,11 @@ function SpotDetails() {
             </div>
             <span>
               {spotDetails.avgStarRating
-                ? `★ ${parseFloat(spotDetails.avgStarRating).toFixed(1)}  ● ${
-                    spotDetails.numReviews
-                  } ${spotDetails.numReviews === 1 ? "Review" : "Reviews"} `
+                ? spotDetails.numReviews > 0
+                  ? `★ ${parseFloat(spotDetails.avgStarRating).toFixed(1)}  ● ${
+                      spotDetails.numReviews
+                    } ${spotDetails.numReviews === 1 ? "Review" : "Reviews"}`
+                  : `★ ${parseFloat(spotDetails.avgStarRating).toFixed(1)}`
                 : "New"}
             </span>
           </div>
