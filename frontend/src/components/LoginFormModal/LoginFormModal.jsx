@@ -73,7 +73,7 @@ function LoginFormModal() {
           <p className={styles.error}>{errors.credential}</p>
         )}
         <button
-          disabled={credential.length < 4}
+          disabled={credential.length < 4 || password.length < 6}
           type="submit"
           className={styles.button}
         >
