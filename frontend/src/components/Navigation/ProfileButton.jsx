@@ -60,7 +60,7 @@ function ProfileButton({ user }) {
                 <div className={styles.profileAvatar}>S</div>
                 <div className={styles.profileRow}>
                   <p className={styles.userName}>
-                    {user.firstName} {user.lastName}
+                    Hello, {user.firstName} {user.lastName}
                   </p>
                   <p className={styles.userEmail}>{user.email}</p>
                 </div>
