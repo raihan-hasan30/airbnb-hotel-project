@@ -49,7 +49,7 @@ function ReviewModal({ spotId, review = reviewDefault }) {
         stars: rating,
       };
 
-      const response = await dispatch(
+      const response = dispatch(
         review?.id
           ? updateReiview(review.id, reviewData, spotId)
           : createReview(spotId, reviewData)
