@@ -4,9 +4,10 @@ import OpenModalButton from "../OpenModalButton/OpenModalButton"
 import ReviewModal from "../ReviewModal/ReviewModal"
 import { useState } from "react"
 import { deleteCurrentReview } from "../../store/manageReview"
+// import { delete_review } from "../../store/reviews"
 
-function ReviewList({ reviews, spotDetails }) {
-  const [reviewToDelete, setReviewToDelete] = useState(null)
+function ReviewList({reviews, spotDetails }) {
+  const [reviewToDelete, setReviewToDelete] = useState(null);
   const [showModal, setShowModal] = useState(false)
   const dispatch = useDispatch()
 
@@ -66,7 +67,7 @@ function ReviewList({ reviews, spotDetails }) {
       </h3>
 
       <div className="reviews-list">
-        {reviews.length &&
+        {reviews.length !== 0 &&
           reviews
             .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
             .map((review, index) => (
